@@ -21,12 +21,12 @@
 const screens=[
 ["Acceso y administración","Pantalla de administración para acceder al negocio y actualizar la cuenta.","assets/01-controla.webp"],
 ["Resumen principal","Ventas, gastos, utilidad estimada y productos activos.","assets/02-controla.webp"],
-["Inventario","Productos, existencias, costos, precios y alertas de stock.","assets/03-controla.webp"],
-["Registrar venta","Ventas de productos o servicios, cantidades, valores y medios de pago.","assets/04-controla.webp"],
-["Gastos y compras","Conceptos, categorías, valores, fechas y fotografías de recibos.","assets/05-controla.webp"],
-["Personal y servicios","Empleados, porcentajes de comisión y servicios realizados.","assets/06-controla.webp"],
-["Reportes","Ventas, gastos, costo de productos vendidos, utilidad estimada y exportación CSV.","assets/07-controla.webp"],
-["Resumen del día","Accesos rápidos para registrar ventas, gastos y productos.","assets/08-controla.webp"]];
+["Inventario","Productos, existencias, costos, precios y alertas de stock.","assets/controla-2.jpg"],
+["Registrar venta","Ventas de productos o servicios, cantidades, valores y medios de pago.","assets/controla-3.jpg"],
+["Gastos y compras","Conceptos, categorías, valores, fechas y fotografías de recibos.","assets/controla-4.jpg"],
+["Personal y servicios","Empleados, porcentajes de comisión y servicios realizados.","assets/controla-5.jpg"],
+["Reportes","Ventas, gastos, costo de productos vendidos, utilidad estimada y exportación CSV.","assets/controla-6.jpg"],
+["Resumen del día","Accesos rápidos para registrar ventas, gastos y productos.","assets/controla-7.jpg"]];
 document.getElementById("heroImg").src=screens[1][2];let active=0;const shots=document.getElementById("shots"),modal=document.getElementById("modal"),mi=document.getElementById("mi");
 function open(i){active=(i+8)%8;let s=screens[active];document.getElementById("mt").textContent=(active+1).toString().padStart(2,"0")+" · "+s[0];document.getElementById("md").textContent=s[1];mi.src=s[2];mi.alt=s[0];modal.classList.add("open");document.body.style.overflow="hidden"}
 screens.forEach((s,i)=>{let b=document.createElement("button");b.className="shot";b.innerHTML='<img src="'+s[2]+'" alt="'+s[0]+'" loading="lazy"><div><b>'+String(i+1).padStart(2,"0")+' · '+s[0]+'</b><span>'+s[1]+'</span><em>AMPLIAR PANTALLA ↗</em></div>';b.onclick=()=>open(i);shots.appendChild(b)});
