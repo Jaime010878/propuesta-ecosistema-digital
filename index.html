@@ -20,14 +20,14 @@
 <script>
 const assetBase='https://jaime010878.github.io/propuesta-ecosistema-digital/assets/';
 const screens=[
-["Acceso y administración","Pantalla de administración para acceder al negocio y actualizar la cuenta.",assetBase+"01-controla.webp?v=3"],
-["Resumen principal","Ventas, gastos, utilidad estimada y productos activos.",assetBase+"controla-dashboard.png?v=3"],
-["Inventario","Productos, existencias, costos, precios y alertas de stock.",assetBase+"controla-2.jpg?v=3"],
-["Registrar venta","Ventas de productos o servicios, cantidades, valores y medios de pago.",assetBase+"controla-3.jpg?v=3"],
-["Gastos y compras","Conceptos, categorías, valores, fechas y fotografías de recibos.",assetBase+"controla-4.jpg?v=3"],
-["Personal y servicios","Empleados, porcentajes de comisión y servicios realizados.",assetBase+"controla-5.jpg?v=3"],
-["Reportes","Ventas, gastos, costo de productos vendidos, utilidad estimada y exportación CSV.",assetBase+"controla-6.jpg?v=3"],
-["Resumen del día","Accesos rápidos para registrar ventas, gastos y productos.",assetBase+"controla-7.jpg?v=3"]
+["Acceso y administración","Pantalla de administración para acceder al negocio y actualizar la cuenta.",assetBase+"01-acceso-administracion.png"],
+["Resumen principal","Ventas, gastos, utilidad estimada y productos activos.",assetBase+"02-resumen-principal.png"],
+["Inventario","Productos, existencias, costos, precios y alertas de stock.",assetBase+"03-inventario.png"],
+["Registrar venta","Ventas de productos o servicios, cantidades, valores y medios de pago.",assetBase+"04-registrar-venta.png"],
+["Gastos y compras","Conceptos, categorías, valores, fechas y fotografías de recibos.",assetBase+"05-gastos-compras.png"],
+["Personal y servicios","Empleados, porcentajes de comisión y servicios realizados.",assetBase+"06-personal-servicios.png"],
+["Reportes","Ventas, gastos, costo de productos vendidos, utilidad estimada y exportación CSV.",assetBase+"07-reportes.png"],
+["Resumen del día","Accesos rápidos para registrar ventas, gastos y productos.",assetBase+"08-resumen-del-dia.png"]
 ];
 document.getElementById("heroImg").src=screens[1][2];let active=0;const shots=document.getElementById("shots"),modal=document.getElementById("modal"),mi=document.getElementById("mi");
 function open(i){active=(i+8)%8;let s=screens[active];document.getElementById("mt").textContent=(active+1).toString().padStart(2,"0")+" · "+s[0];document.getElementById("md").textContent=s[1];mi.src=s[2];mi.alt=s[0];modal.classList.add("open");document.body.style.overflow="hidden"}
